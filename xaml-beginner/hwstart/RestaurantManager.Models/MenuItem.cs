@@ -13,7 +13,7 @@ namespace RestaurantManager.Models
 
         public override string ToString()
         {
-            return base.ToString();
+            return string.Format("{0}, ({1} $)",this.Title,this.Price);
         }
     }
 }

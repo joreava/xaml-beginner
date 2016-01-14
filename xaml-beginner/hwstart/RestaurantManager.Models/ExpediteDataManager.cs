@@ -16,5 +16,10 @@ namespace RestaurantManager.Models
         {
             get { return base.Repository.Orders; } 
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
