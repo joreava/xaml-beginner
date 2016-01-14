@@ -13,7 +13,8 @@ namespace RestaurantManager.Extensions
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            throw  new NotImplementedException();
+            if (((Color)value) == Colors.Red) return true;
+            else return false;
         }
     }
 }

@@ -47,11 +47,22 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                         <TextBlock Text="{Binding SpecialRequests}" Padding="5" FontSize="10" FontStyle="Italic" Grid.Row="1" HorizontalAlignment="Stretch"></TextBlock>
-                        <Button Content="Delete" Grid.Row="2" HorizontalAlignment="Stretch" BorderBrush="{Binding Expedite, Converter={StaticResource ResourceKey=BooleanToColorConverter}}" ></Button>
+                        <Button Content="Delete" Grid.Row="2" HorizontalAlignment="Stretch">
+                            <Button.Background>
+                                <SolidColorBrush>
+                                    <SolidColorBrush.Color>
+                                        <Binding Path="Expedite">
+                                            <Binding.Converter>
+                                                <converters:BooleanToColorConverter></converters:BooleanToColorConverter>
+                                            </Binding.Converter>
+                                        </Binding>
+                                    </SolidColorBrush.Color>
+                                </SolidColorBrush>
+                            </Button.Background>
+                        </Button>
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
-
         </GridView>
         <Button Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" />
     </Grid>

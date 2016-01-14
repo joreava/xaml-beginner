@@ -107,7 +107,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoolteanToColorConverter.cs" />
+    <Compile Include="BooleanToColorConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\RestaurantManager.Extensions.rd.xml" />
   </ItemGroup>
