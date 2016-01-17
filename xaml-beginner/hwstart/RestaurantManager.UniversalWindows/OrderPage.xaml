@@ -19,6 +19,7 @@
             </AppBarButton>
         </AppBar>
     </Page.TopAppBar>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.50*"/>
@@ -33,6 +34,7 @@
             <RowDefinition Height="0.10*"/>
             <RowDefinition Height="0.10*"/>
         </Grid.RowDefinitions>
+        <ProgressRing Grid.RowSpan="6" Height="200" Width="300" IsActive="{Binding IsLoading}" />
         <TextBlock Grid.Row="2" Grid.Column="1" Text="Special Requests:" />
         <TextBlock Grid.Row="2" Grid.Column="2" Text="Order Items:" />
         <TextBox Grid.Row="3" Grid.Column="1" x:Name="SpecReq" Foreground="DarkGray"/>

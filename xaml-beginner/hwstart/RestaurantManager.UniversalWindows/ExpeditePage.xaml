@@ -23,12 +23,14 @@
             </AppBarButton>
         </AppBar>
     </Page.TopAppBar>
+   
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.05*"/>
             <RowDefinition Height="0.85*"/>
             <RowDefinition Height="0.10*"/>
         </Grid.RowDefinitions>
+        <ProgressRing Grid.RowSpan="3" Height="200" Width="300" IsActive="{Binding IsLoading}" />
         <GridView Grid.Row="1" ItemsSource="{Binding OrderItems}" Margin="3">
             <GridView.ItemTemplate>
                 <DataTemplate>
