@@ -20,7 +20,6 @@ namespace RestaurantManager.ViewModels
         {
             this.AddMenuItemCommand = new DelegateCommand<MenuItem>(AddMenuItemAction);
             this.SubmitOrderCommand = new DelegateCommand<string>(SubmitOrderAction);
-           
         }
 
 

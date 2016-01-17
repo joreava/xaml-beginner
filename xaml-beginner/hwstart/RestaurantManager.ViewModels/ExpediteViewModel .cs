@@ -17,6 +17,7 @@ namespace RestaurantManager.ViewModels
 
         public ExpediteViewModel()
         {
+           
             ClearOrdersCommand = new DelegateCommand<ObservableCollection<Order>>(ClearOrderAction);
         }
 
@@ -32,7 +33,6 @@ namespace RestaurantManager.ViewModels
 
         protected override void OnDataLoaded()
         {
-            //NotifyPropertyChanged("OrderItems");
             orderItems = base.Repository.Orders;
         }
 
