@@ -39,7 +39,7 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
-                        <ListBox Grid.Row="0" ItemsSource="{Binding Items}" HorizontalAlignment="Stretch" >
+                        <ListBox Grid.Row="0" x:Name="OrdersListBox" ItemsSource="{Binding Items}" HorizontalAlignment="Stretch" >
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding}"></TextBlock>
@@ -64,6 +64,6 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <Button Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" />
+        <Button Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Command="{Binding ClearOrdersCommand}" CommandParameter="{Binding ElementName=OrdersListBox, Path=SelectedItem}" />
     </Grid>
 </Page>

@@ -11,6 +11,23 @@ namespace RestaurantManager.ViewModels
     public class ExpediteViewModel : ViewModel
     {
 
+        #region Commands
+        public DelegateCommand<ObservableCollection<Order>> ClearOrdersCommand { get; set; }
+        #endregion
+
+        public ExpediteViewModel()
+        {
+            ClearOrdersCommand = new DelegateCommand<ObservableCollection<Order>>(ClearOrderAction);
+        }
+
+        private void ClearOrderAction(ObservableCollection<Order> obj)
+        {
+            if (this.orderItems != null)
+            {
+                this.orderItems.Clear();
+            }
+        }
+
         private ObservableCollection<Order> orderItems;
 
         protected override void OnDataLoaded()

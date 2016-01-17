@@ -13,7 +13,7 @@ namespace RestaurantManager.Models
 
         public ObservableCollection<MenuItem> StandardMenuItems { get; private set; }
 
-        public ObservableCollection<Order> Orders { get; private set; }
+        public ObservableCollection<Order> Orders { get; set; }
 
         public async Task InitializeContextAsync()
         {
@@ -42,8 +42,8 @@ namespace RestaurantManager.Models
 
             this.Orders = new ObservableCollection<Order>
             {
-                new Order { Complete = false, Expedite = true, SpecialRequests = "Allergic to Shellfish", Table = this.Tables.Last(), Items = new ObservableCollection<MenuItem> { this.StandardMenuItems.First() } },
-                new Order { Complete = false, Expedite = false, SpecialRequests = String.Empty, Table = this.Tables.Last(), Items = new ObservableCollection<MenuItem> { this.StandardMenuItems.Last(), this.StandardMenuItems.First() } },
+                //new Order { Complete = false, Expedite = true, SpecialRequests = "Allergic to Shellfish", Table = this.Tables.Last(), Items = new ObservableCollection<MenuItem> { this.StandardMenuItems.First() } },
+                //new Order { Complete = false, Expedite = false, SpecialRequests = String.Empty, Table = this.Tables.Last(), Items = new ObservableCollection<MenuItem> { this.StandardMenuItems.Last(), this.StandardMenuItems.First() } },
             };
         }
     }
